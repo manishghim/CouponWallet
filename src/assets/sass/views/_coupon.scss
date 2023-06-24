@@ -1,0 +1,12 @@
+@import "@sass/helpers/mixins";
+@import "@sass/helpers/variables";
+
+.Coupon {
+    background-color: $blue;
+    height: 100%;
+    padding: 30px;
+
+    @include e(row){
+        padding: 10px 0;
+    }
+}

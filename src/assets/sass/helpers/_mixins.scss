@@ -1,0 +1,36 @@
+@use "sass:meta";
+@import 'variables';
+
+//BEM(Block Element Modifier) Naming Convention
+//For Element
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+//For Modifiers
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// Media queries 
+@mixin for-size($break) {
+  @if $break =='mobile' {
+    @media (min-width: $mobile) {
+      @content;
+    }
+  }
+
+  @else if $break =='desktop' {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+
+  @else {
+    @error "Only mobile and desktop sizes are available";
+  }
+}

@@ -1,0 +1,39 @@
+@import "@sass/helpers/mixins";
+@import "@sass/helpers/variables";
+
+.CouponCard {
+    background-color: $white;
+    padding: 10px;
+    border-radius: 16px;
+    display: flex;
+
+    @include e(wallet-points){
+        background-color: $green;
+        border-radius: 20px;
+        text-align: center;
+        width: 50%;
+        opacity: 40%;
+        margin: 0 auto;
+        font: normal bold 12px/2.5 $primary-font;
+    }
+
+    @include e(content){
+        margin-left: 20px;
+        padding: 10px 0;
+        font: normal normal 14px/1.75 $primary-font;
+        text-align: center;
+
+        strong {
+            font-size: 30px;
+        }
+
+        span {
+            font-size: 10px;
+        }
+
+        p {
+            width: 20%;
+            margin: 5px auto;
+        }
+    }
+}

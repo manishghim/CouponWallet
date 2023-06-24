@@ -1,8 +1,12 @@
-function App() {
+import Coupon from "@/views/Coupon"
+
+import "@sass/_main.scss"
+
+const App = () => {
 
   return (
     <>
-      <div>Hello</div>
+      <Coupon />
     </>
   )
 }
