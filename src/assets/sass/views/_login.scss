@@ -1,0 +1,64 @@
+@import "@sass/helpers/mixins";
+@import "@sass/helpers/variables";
+
+.Login {
+    background-color: $blue;
+    height: 100vh;
+
+    @include e(container) {
+        padding: 130px 0;
+        width: 375px;
+        margin: 0 auto;
+    }
+
+    @include e(logo){
+        width: 130px;
+        margin: 0 auto;
+    }
+
+    @include e(body){
+        width: 80%;
+        margin: 0 auto;
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            color: $white;
+            font: normal normal 20px/1.5 $primary-font;
+        }
+
+        p{
+            margin: 10px 22px;
+            color: $white;
+            letter-spacing: 0.1px;
+            font: normal normal 16px/1.5 $primary-font;
+        }
+
+        input {
+            width: 280px;
+            padding: 8px 20px;
+            border-radius: 16px;
+            border: none;
+            background-color: $gray;
+            
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    @include e(button){
+        text-align: center;
+        margin-top: 30px;
+        
+        button {
+            padding: 8px 40px;
+            border-radius: 16px;
+            border: 0;
+            background-color: $gray;
+            color: $blue;
+            font: normal normal 16px/1.5 $primary-font;
+            text-transform: uppercase;
+        }
+    }
+}
