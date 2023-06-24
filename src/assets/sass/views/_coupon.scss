@@ -5,8 +5,30 @@
     background-color: $blue;
     height: 100%;
     padding: 30px;
+    position: relative;
+
 
     @include e(row){
         padding: 10px 0;
+    }
+
+    @include e(modal-content){
+        background-color: $blue;
+        width: 80%;
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        text-align: center;
+        border-radius: 48px;
+        color: $white;
+        font: normal normal 30px/1.2 $primary-font;
+
+        h2 {
+            font-size: 30px;
+        }
+
+        p {
+            letter-spacing: 8px;
+        }
     }
 }

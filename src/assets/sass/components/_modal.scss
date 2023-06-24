@@ -1,0 +1,29 @@
+@import "@sass/helpers/mixins";
+@import "@sass/helpers/variables";
+
+.Modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @include e(backgroun){
+        height: 100%;
+        background-color: $white;
+        opacity: 40%;
+    }
+
+    @include e(body){
+        position: relative;
+        height: 100%;
+    }
+
+    @include e(close_btn){
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 16px;
+        right: 24px;
+    }
+}
