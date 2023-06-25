@@ -1,16 +1,17 @@
 // import Coupon from "@/views/Coupon"
-import Login from "@/views/Login"
+// import Login from "@/views/Login"
+import Profile from "@/views/Profile";
 
-import "@sass/_main.scss"
+import "@sass/_main.scss";
 
 const App = () => {
-
   return (
     <>
       {/* <Coupon /> */}
-      <Login />
+      {/* <Login /> */}
+      <Profile />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
