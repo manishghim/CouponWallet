@@ -3,8 +3,15 @@ import React from "react";
 import Menu from "@components/Menu";
 
 import "@sass/views/_profile.scss";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+  const navigate = useNavigate();
+
+  const redeemCoupon = () => {
+    navigate("/coupon");
+  };
+
   return (
     <div className="Profile">
       <div className="Profile__content">
@@ -24,7 +31,7 @@ const Profile = () => {
             <p>Wallet Point</p>
             <p>XXXX.XX</p>
           </div>
-          <div className="Profile__coupon-col">
+          <div className="Profile__coupon-col" onClick={redeemCoupon}>
             <span>Redeem</span>
           </div>
         </div>
