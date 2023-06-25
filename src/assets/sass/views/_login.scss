@@ -61,4 +61,11 @@
             text-transform: uppercase;
         }
     }
+
+    @include e(error){
+        display: inline-block;
+        margin-top: 8px;
+        margin-left: 14px;
+        color: $red;
+    }
 }
