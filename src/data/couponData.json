@@ -1,0 +1,28 @@
+{
+  "coupons": [
+    {
+      "type": "cinema",
+      "walletPoints": 200,
+      "discount": 5,
+      "text": "Any Cinemas"
+    },
+    {
+      "type": "planeTicket",
+      "walletPoints": 500,
+      "discount": 10,
+      "text": "Plane ticket"
+    },
+    {
+      "type": "bigMart",
+      "walletPoints": 1000,
+      "discount": 12,
+      "text": "Big Mart"
+    },
+    {
+      "type": "goldstar",
+      "walletPoints": 1200,
+      "discount": 15,
+      "text": "Goldstart Product"
+    }
+  ]
+}

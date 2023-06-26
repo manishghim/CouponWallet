@@ -10,3 +10,7 @@ export const getFromLocalStorage = (key) => {
   var value = localStorage.getItem(key);
   return JSON.parse(value);
 };
+
+export const deleteFromLocalStorage = (key) => {
+  localStorage.removeItem(key);
+};

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { saveToLocalStorage, getFromLocalStorage } from "@utils/util";
+import couponData from "../../data/couponData.json";
 
 import Wallet from "@images/wallet.svg";
 
 import "@sass/views/_login.scss";
-import { useNavigate } from "react-router-dom";
-import { saveToLocalStorage } from "../../utils/util";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -53,6 +54,7 @@ const Login = () => {
     }
 
     saveToLocalStorage("isLoggedIn", true);
+    saveToLocalStorage("coupons", couponData.coupons);
     navigate("/");
   };
 

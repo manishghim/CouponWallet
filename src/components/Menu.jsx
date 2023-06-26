@@ -6,10 +6,20 @@ import Offer from "@images/offer.svg";
 import Statement from "@images/statement.svg";
 import Setting from "@images/setting.svg";
 import Logout from "@images/logout.svg";
+import { deleteFromLocalStorage } from "@utils/util";
 
 import "@sass/components/_menu.scss";
+import { useNavigate } from "react-router-dom";
 
 const Menu = () => {
+  const navigate = useNavigate();
+
+  const logout = () => {
+    deleteFromLocalStorage("isLoggedIn");
+    deleteFromLocalStorage("coupons");
+    navigate("/login");
+  };
+
   return (
     <div className="Menu">
       <div className="Menu__row">
@@ -32,7 +42,7 @@ const Menu = () => {
         <img src={Setting} alt="setting" />
         <p>Settings</p>
       </div>
-      <div className="Menu__row">
+      <div className="Menu__row" onClick={logout}>
         <img src={Logout} alt="logout" />
         <p>Logout</p>
       </div>

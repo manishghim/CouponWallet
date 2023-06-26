@@ -2,43 +2,44 @@
 @import "@sass/helpers/variables";
 
 .CouponCard {
-    background-color: $white;
-    padding: 10px;
-    border-radius: 16px;
-    display: flex;
+  background-color: $white;
+  padding: 10px;
+  border-radius: 16px;
+  display: flex;
 
-    img {
-        width: 150px;
-        height: 100px;
+  img {
+    width: 150px;
+    height: 100px;
+  }
+
+  @include e(wallet-points) {
+    background-color: $green;
+    border-radius: 20px;
+    text-align: center;
+    width: 50%;
+    opacity: 40%;
+    margin: 0 auto;
+    font: normal bold 12px/2.5 $primary-font;
+  }
+
+  @include e(content) {
+    margin-left: 12px;
+    padding: 10px 0;
+    font: normal normal 14px/1.75 $primary-font;
+    text-align: center;
+    text-transform: uppercase;
+
+    strong {
+      font-size: 30px;
     }
 
-    @include e(wallet-points){
-        background-color: $green;
-        border-radius: 20px;
-        text-align: center;
-        width: 50%;
-        opacity: 40%;
-        margin: 0 auto;
-        font: normal bold 12px/2.5 $primary-font;
+    span {
+      font-size: 10px;
     }
 
-    @include e(content){
-        margin-left: 12px;
-        padding: 10px 0;
-        font: normal normal 14px/1.75 $primary-font;
-        text-align: center;
-
-        strong {
-            font-size: 30px;
-        }
-
-        span {
-            font-size: 10px;
-        }
-
-        p {
-            width: 20%;
-            margin: 5px auto;
-        }
+    p {
+      width: 20%;
+      margin: 5px auto;
     }
+  }
 }
